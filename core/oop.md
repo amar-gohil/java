@@ -17,8 +17,9 @@
 
    ### Use 
     1. Factory method pattern
-    2. Abstract class to write flexible code
+    2. Abstract class to write flexible code (You want to share code among several closely related classes)
     3. Achieve Abstraction (0 to 100%)
+    4. More suited for code reuse and evolution perspective.
     
    ### Example
     1. AbstractMap
