@@ -1,4 +1,4 @@
-**Overriding**
+## Overriding
 
 1. Argument list in overridden and overriding methods must be exactly same.
 2. Return type of overriding method can be child class of return type declared in overridden method.
