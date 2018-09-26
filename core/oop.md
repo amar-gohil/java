@@ -13,6 +13,7 @@
 3. It cannot be instantiated.
 4. It can have constructors.
 5. If you are extending an abstract class that has an abstract method, you must either provide the implementation of the method or make      this class abstract.
+6. A class can be abstract even without any abstract method.(there is no point doing it)
 
    ### Use 
     1. Factory method pattern
