@@ -3,13 +3,13 @@
 2. Return type of overriding method can be child class of return type declared in overridden method.
 
 	public Number sum(Integer a, Integer b) {
-        return a + b;
-    }
+        	return a + b;
+    	}
 
-    @Override
-    public Integer sum(Integer a, Integer b) {      //Integer extends Number; so it's valid
-        return a + b;
-    }
+    	@Override
+    	public Integer sum(Integer a, Integer b) {      //Integer extends Number; so it's valid
+        	return a + b;
+    	}
 
     But Not Valid-----
 
@@ -17,10 +17,10 @@
         return a + b;
     }
 
-    @Override
-    public Number sum(Integer a, Integer b) {      //Integer extends Number; so it's NOT valid
-        return a + b;
-    }
+    	@Override
+    	public Number sum(Integer a, Integer b) {      //Integer extends Number; so it's NOT valid
+        	return a + b;
+    	}
 
 3. Private, static and final methods can not be overridden.
 4. Overriding method can not throw checked Exception higher in hierarchy.
