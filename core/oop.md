@@ -13,3 +13,9 @@
 3. It cannot be instantiated.
 4. It can have constructors.
 5. If you are extending an abstract class that has an abstract method, you must either provide the implementation of the method or make      this class abstract.
+
+   # Use 
+    1.
+   # Example
+    1. AbstractMap
+    2. HttpServlet
