@@ -9,14 +9,16 @@
 # Abstract Class
 
 1. An abstract class must be declared with an abstract keyword.
-2. It can have abstract and non-abstract methods, final, static private method.
+2. Abstract classes are flexible in declaring the methods. You can define abstract methods with protected accessibility also.                Additionally, you can define static methods as well, provided they are not abstract. Non-abstract static methods are allowed.
 3. It cannot be instantiated.
 4. It can have constructors.
 5. If you are extending an abstract class that has an abstract method, you must either provide the implementation of the method or make      this class abstract.
 
    ### Use 
     1. Factory method pattern
-    2. 
+    2. Abstract class to write flexible code
+    3. Achieve Abstraction (0 to 100%)
+    
    ### Example
     1. AbstractMap
     2. HttpServlet
