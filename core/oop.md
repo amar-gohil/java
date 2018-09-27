@@ -24,3 +24,11 @@
    ### Example
     1. AbstractMap
     2. HttpServlet
+
+# Interface
+
+1. Interface all methods are public, abstract
+2. Methods never final.
+3. Declares only method headers.
+4. Cannot be instantiated.
+5. Can be implemented by a class, cannot extend a class, can extend several other interfaces.
