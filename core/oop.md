@@ -32,4 +32,7 @@
 3. Declares only method headers.
 4. Cannot be instantiated.
 5. Can be implemented by a class, cannot extend a class, can extend several other interfaces.
-6. An interface cannot contain instance fields. The only fields that can appear in an interface must be declared both static and final.
+6. An interface cannot contain instance fields. The only fields that can appear in an interface must be declared both public, static and      final.
+
+   ### Use
+   1. Achieve Abstraction (100%)
