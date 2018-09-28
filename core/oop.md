@@ -26,7 +26,7 @@
     2. HttpServlet
 
 # Interface
-
+ Interfaces specify what a class must do and not how. It is the blueprint of the class.
 1. Interface all methods are public, abstract
 2. Methods never final.
 3. Declares only method headers.
@@ -41,5 +41,4 @@
 12. Inside any implementation class, you cannot change the variables declared in interface because by default, they are public, static       and final. 
 13. A class cannot implement two interfaces that have methods with same name but different return type.
 14. Variable names conflicts can be resolved by interface name.
-   ### Use
-   1. Achieve Abstraction (100%)
+15. Achieve Abstraction (100%)
