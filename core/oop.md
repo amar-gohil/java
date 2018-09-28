@@ -51,3 +51,7 @@
    ### In JDK 9
    
    1. We can now add Static, Private, Private Static methods
+   
+   ### Nested Interface
+   
+   1.We can declare interfaces as member of a class or another interface. Such an interface is called as member interface or nested          interface.
