@@ -33,6 +33,13 @@
 4. Cannot be instantiated.
 5. Can be implemented by a class, cannot extend a class, can extend several other interfaces.
 6. An interface cannot contain instance fields. The only fields that can appear in an interface must be declared both public, static and      final.
-
+7. However you can implement more than one interfaces in your class.
+8. An empty interface is known as tag or marker interface(Tag). For example Serializable, EventListener
+9. An interface which is declared inside another interface or class is called nested interface. Entry interface inside Map.
+10. Interface cannot be declared as private, protected or transient.
+11. Interface variables must be initialized at the time of declaration.
+12. Inside any implementation class, you cannot change the variables declared in interface because by default, they are public, static       and final. 
+13. A class cannot implement two interfaces that have methods with same name but different return type.
+14. Variable names conflicts can be resolved by interface name.
    ### Use
    1. Achieve Abstraction (100%)
