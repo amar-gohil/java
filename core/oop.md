@@ -45,12 +45,9 @@
 
    ### In JDK 8
    
-   --> We can now add default implementation for interface methods.
-   --> We can now define static methods in interfaces which can be called independently without an object. Note: these methods are not          inherited.
+   1. We can now add default implementation for interface methods.
+   2. We can now define static methods in interfaces which can be called independently without an object. Note: these methods are not         inherited.
    
    ### In JDK 9
    
-   --> Static methods
-   --> Private methods
-   --> Private Static methods
-   
+   1. We can now add Static, Private, Private Static methods
