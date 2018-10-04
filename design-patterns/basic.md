@@ -5,7 +5,7 @@
 3. Behavioral
 
 # Creational
-These design patterns are all about class instantiation or object creation.
+These design patterns are all about class instantiation or object creation.<br />
   --> Factory Method <br />
   --> Abstract Factory <br />
   --> Builder, Singleton <br />
