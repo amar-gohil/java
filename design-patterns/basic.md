@@ -8,7 +8,8 @@
 These design patterns are all about class instantiation or object creation.<br /> <br /> 
   --> Factory Method <br />
   --> Abstract Factory <br />
-  --> Builder, Singleton <br />
+  --> Builder  <br />
+  --> Singleton <br />
   --> Object Pool <br />
   --> Prototype <br />
 
