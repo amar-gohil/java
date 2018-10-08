@@ -28,3 +28,7 @@ Abstract factory pattern implementation provides us a framework that allows us t
 ### Observer pattern
 
 Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically. Observer pattern falls under behavioral pattern category.
+
+### Prototype Pattern
+
+Prototype pattern refers to creating duplicate object while keeping performance in mind. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
