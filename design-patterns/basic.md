@@ -32,3 +32,7 @@ Observer pattern is used when there is one-to-many relationship between objects 
 ### Prototype Pattern
 
 Prototype pattern refers to creating duplicate object while keeping performance in mind. This type of design pattern comes under creational pattern as this pattern provides one of the best ways to create an object.
+
+### Singleton Design
+
+Singleton is a part of Gang of Four design pattern and it is categorized under creational design patterns. In this article, we are going to take a deeper look into the usage of the Singleton pattern. It is one of the most simple design pattern in terms of the modelling but on the other hand this is one of the most controversial pattern in terms of complexity of usage.
