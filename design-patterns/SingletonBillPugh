@@ -1,0 +1,19 @@
+class InnerClassSingleton {
+
+	private InnerClassSingleton() {
+	}
+
+	private static class InnerClass {
+		private static final InnerClassSingleton singleton = new InnerClassSingleton();
+	}
+
+	public static InnerClassSingleton getInstance() {
+		return InnerClass.singleton;
+	}
+}
+
+public class SingletonBillPugh {
+	public static void main(String[] args) {
+		System.out.println(InnerClassSingleton.getInstance());
+	}
+}
