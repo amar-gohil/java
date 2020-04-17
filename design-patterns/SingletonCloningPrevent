@@ -1,0 +1,44 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class SingletonCloningPrevent implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final SingletonCloningPrevent singletonCloningPrevent = new SingletonCloningPrevent();
+
+	private SingletonCloningPrevent() {
+	}
+	// implement readResolve method TO PREVENT
+    protected Object readResolve() 
+    { 
+        return singletonCloningPrevent; 
+    } 
+	public static SingletonCloningPrevent getInstance() {
+		return singletonCloningPrevent;
+	}
+
+	public static void main(String[] args) {
+		SingletonCloningPrevent obj1 = SingletonCloningPrevent.getInstance();
+		SingletonCloningPrevent obj2 = null;
+		try {
+			ObjectOutput out = new ObjectOutputStream(new FileOutputStream("file.txt"));
+			out.writeObject(obj1);
+			out.close();
+			ObjectInput in = new ObjectInputStream(new FileInputStream("file.txt"));
+			obj2 = (SingletonCloningPrevent) in.readObject();
+			in.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("instance1.hashCode():- " + obj1.hashCode());
+		System.out.println("instance2.hashCode():- " + obj2.hashCode());
+	}
+}
