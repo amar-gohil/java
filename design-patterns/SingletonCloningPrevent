@@ -1,44 +1,33 @@
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
 
-public class SingletonCloningPrevent implements Serializable{
+class SuperClass implements Cloneable {
+	int i = 10;
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private static final SingletonCloningPrevent singletonCloningPrevent = new SingletonCloningPrevent();
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+}
+
+public class SingletonCloningPrevent extends SuperClass {
+	private static final SingletonCloningPrevent singleton = new SingletonCloningPrevent();
 
 	private SingletonCloningPrevent() {
 	}
-	// implement readResolve method TO PREVENT
-    protected Object readResolve() 
-    { 
-        return singletonCloningPrevent; 
-    } 
+
 	public static SingletonCloningPrevent getInstance() {
-		return singletonCloningPrevent;
+		return singleton;
 	}
 
-	public static void main(String[] args) {
-		SingletonCloningPrevent obj1 = SingletonCloningPrevent.getInstance();
-		SingletonCloningPrevent obj2 = null;
-		try {
-			ObjectOutput out = new ObjectOutputStream(new FileOutputStream("file.txt"));
-			out.writeObject(obj1);
-			out.close();
-			ObjectInput in = new ObjectInputStream(new FileInputStream("file.txt"));
-			obj2 = (SingletonCloningPrevent) in.readObject();
-			in.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		System.out.println("instance1.hashCode():- " + obj1.hashCode());
-		System.out.println("instance2.hashCode():- " + obj2.hashCode());
+	// implement clone method TO PREVENT
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		throw new CloneNotSupportedException();
+	}
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+		SingletonCloningPrevent obj1 = SingletonCloningPrevent.singleton;
+		SingletonCloningPrevent obj2 = (SingletonCloningPrevent) obj1.clone();
+		System.out.println("instance1 hashCode:- " + obj1.hashCode());
+		System.out.println("instance2 hashCode:- " + obj2.hashCode());
 	}
 }
