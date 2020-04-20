@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Subject3 {
+	List<ObserverSimple> list = new ArrayList<ObserverSimple>();
+
+	public void chane() {
+		notifyAllObservers();
+	}
+
+	public void notifyAllObservers() {
+		list.stream().forEach(o -> o.update());
+	}
+}
+
+interface ObserverSimple {
+	void update();
+}
+
+class Observer3 implements ObserverSimple {
+	public void update() {
+		System.out.println("something change");
+	}
+}
+
+public class ObservableSimple {
+	public static void main(String[] args) {
+		Observer3 observer3 = new Observer3();
+		Subject3 subject3 = new Subject3();
+		subject3.list.add(observer3);
+		subject3.chane();
+	}
+
+}
