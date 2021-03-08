@@ -1,4 +1,5 @@
 ------------------------------------ In Java 8 ---------------------------
+
 abstract class: Inside abstract class we can declare instance variables, which are required to the child class
 
 Interface: Inside interface every variables is always public static and final we cannot declare instance variables
